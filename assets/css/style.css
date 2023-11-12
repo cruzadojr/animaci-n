@@ -1,0 +1,129 @@
+
+
+/* estilos para el logo y menú */
+
+.menu-container {
+  background-color: rgb(88, 185, 64);
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: 1fr;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.nav_logito {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}
+ul.main {
+  list-style: none; /* elimina los puntos de la lista */
+}
+
+a.nav_link {
+  text-decoration: none; /* elimina el subrayado de los enlaces */
+  font-weight: bold; 
+  font-size: 16px; /* tamaño de fuente de los enlaces */
+  padding: 10px 0; /* espaciado interno a los enlaces */
+}
+
+a.nav_link:hover {
+  background-color: black; /* Cambia el fondo cuando el enlace se pasa por encima */
+}
+
+
+/* contenido de main de imagenes*/
+main {
+  background-color: rgb(180, 197, 29);
+  padding: 1rem;
+  display: grid;
+}
+
+.images-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1rem;
+  justify-content: center;
+  align-content: center;
+}
+
+
+
+img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+
+
+img:hover {
+  transform: rotate(20deg);
+}
+
+.item-a,
+.item-b,
+.item-c,
+.item-d {
+  grid-row: auto;
+  grid-column: auto;
+}
+
+/* Pie de pagina (footer) */
+footer {
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(215, 213, 224);
+}
+
+
+.footer-texto {
+  font-size: 1.5rem;
+  padding: 5px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-family: Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.iconos i {
+  font-size: 40px; 
+}
+.iconos a {
+  margin-right: 20px; /* margen derecho para los iconos */
+}
+
+.iconos {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.derechos-de-autor {
+  text-align: center;
+  font-family: 'Arial Narrow Bold', sans-serif;
+}
+
+/* estilos para el menú en pantallas pequeñas */
+ @media screen and (max-width: 768px) {
+  .menu-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    grid-gap: 1rem;
+    text-align: center; 
+  }
+  .images-container {
+    grid-template-columns: 1fr; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  img {
+    max-width: 90%; 
+    height: 90%; 
+  }
+ }
+
+
+

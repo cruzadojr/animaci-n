@@ -1,0 +1,135 @@
+
+body {
+    margin: 0;
+  }
+  
+  .total {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: 70% 30%; 
+    min-height: 100vh;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+  
+  .menu-container {
+    background-color: rgb(88, 185, 64);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .nav_logito {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+  }
+  
+  ul.main {
+    list-style: none;
+    padding: 0;
+  }
+  
+  a.nav_link {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 10px 0;
+    color: white;
+  }
+  
+  a.nav_link:hover {
+    background-color: black;
+  }
+  
+  /* Contenido principal de imágenes */
+  
+  main {
+    background-color: rgb(180, 197, 29);
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: 2fr;
+    grid-gap: 1rem;
+    justify-content: center;
+    align-content: center;
+  }
+  
+  .images-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1rem;
+    justify-content: center;
+    align-content: center;
+  }
+  
+  img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s;
+  }
+  
+  img:hover {
+    transform: rotate(20deg); 
+  }
+  
+  /* Pie de página (footer) */
+  
+  footer {
+    grid-column: span 2;    /* ocupando ambas columnas */
+    min-height: 100px;
+    background-color: rgb(215, 213, 224);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  .footer-texto {
+    font-size: 1.5rem;
+    padding: 5px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: Cochin, Georgia, Times, 'Times New Roman', serif;
+  }
+  
+  .iconos i {
+    font-size: 40px;
+  }
+  
+  .iconos a {
+    margin-right: 20px;
+  }
+  
+  .iconos {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .derechos-de-autor {
+    text-align: center;
+    font-family: 'Arial Narrow Bold', sans-serif;
+  }
+
+  /* estilos para el menú en pantallas pequeñas */
+ @media screen and (max-width: 768px) {
+
+    .total {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .images-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    img {
+      max-width: 90%; 
+      height: 90%; 
+    }
+  }
